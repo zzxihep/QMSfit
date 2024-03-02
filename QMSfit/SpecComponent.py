@@ -1,10 +1,14 @@
 import numpy as np
-from .LineLists import Lines, get_line_wavelength
+# from .LineLists import Lines, get_line_wavelength
 from astropy.constants import c
 
 
 class Component:
+    _next_id = 0
+
     def __init__(self, ComponentName="None"):
+        self.id = Component._next_id
+        Component._next_id += 1
         self.ComponentName = ComponentName
         self.ComponentType = "baseType"
         self.parnames = []
