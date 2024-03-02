@@ -1,0 +1,26 @@
+{
+    "id":"1",
+    "model":
+    {
+        "components":
+        [
+            {"compid":"1", "funcname":"gaussian", "inipar":[4861], "var":[10, 20, 30], "varlimit":[[9, 11], [15, 30], [20, 40]], "compname":"Hbeta", "comptexname":"H$\\beta$"}, 
+            {"compid":"2", "funcname":"gaussian", "inipar":[4340], "var":[10, 20, 30], "varlimit":[[9, 11], [15, 30], [20, 40]], "compname":"Hgamma", "comptexname":"H$\\gamma$"},
+            {"compid":"3", "funcname":"powerlaw", "inipar":[5100], "var":[2, -1.5], "varlimit":[[0.1, 10], [-10, 0]], "compname":"Hbeta", "comptexname":"H$\beta$"}
+        ],
+        "ties":
+        {
+            "var":
+            [
+                {"id":"1", "tie":"profile", "tieid":"2", "parids":["1"], "pars":[]}, 
+                {"id":"2", "tie":"value", "tieid":"3", "parids":[], "pars":[0.0]}
+            ],
+            "limit":
+            [
+                {"id":"1", "tie":"littleShift", "tieid":"1", "parids":["2"], "pars":[-20, 20]}
+            ]
+        }
+    }, 
+    "data":
+        { "file":"XXX.fits", "format":"NULL", "redshift": 0.0, "windows":[[4340, 4560], [4600, 5550], [6000, 7000]] }
+}
