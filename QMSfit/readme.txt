@@ -1,0 +1,1 @@
+The information of the lines is from http://astronomy.nmsu.edu/drewski/tableofemissionlines.html.
