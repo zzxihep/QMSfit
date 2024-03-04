@@ -67,3 +67,23 @@ class Gaussian(Component):
         return flux / (sigma_wave * np.sqrt(2 * np.pi)) * np.exp(
             -0.5 * ((waves - w0) / sigma_wave) ** 2
         )
+
+
+class Dgaussian(Component):
+    pass
+
+
+class Lorentzian(Component):
+    pass
+
+
+class PowerLaw(Component):
+    pass
+
+
+class DPowerLaw(Component):
+    pass
+
+
+class BalmerContinuum(Component):
+    pass
